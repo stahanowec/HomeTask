@@ -46,7 +46,7 @@ public class AvicSmokeTests {
 
     @Test(priority = 2)
     public void checkThatTradeinEstimatesMonetaryValue() {
-        driver.findElement(By.xpath(("//div[contains(@class, 'header')]"))).click();
+        driver.findElement(By.xpath(("//div[contains(@class, 'header')]//a[@href='/tradein']"))).click();
         WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("mm-0")));
         driver.findElement(By.xpath(("//button[text()='Вперед']"))).click();
